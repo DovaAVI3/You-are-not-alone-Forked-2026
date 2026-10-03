@@ -63,8 +63,7 @@ label alexander_ch2:
 
     "Я попытался отшутиться, натянув напряжённую улыбку."
 
-    # TODO: заменить на alex very angry, когда нарисуют. Сейчас плейсхолдер.
-    show alex angry wintera at right2 with dissolve
+    show alex very angry wintera at right2 with dissolve
 
     sh "Ты вообще представляешь, что могло бы случиться? Одна секунда невнимательности и всё! Понимаешь?"
 
@@ -76,7 +75,7 @@ label alexander_ch2:
 
     "Он выдохнул и отпустил мою руку."
 
-    show alex normala at right2 with dissolve
+    show alex angry wintera at right2 with dissolve
 
     sh "Просто... будь аккуратнее в следующий раз. Дорога — не место для витания в облаках. Пошли в университет, а то опоздаем."
 
@@ -84,7 +83,7 @@ label alexander_ch2:
 
     mc "Да, стоит поторопиться."
 
-    hide alex normala with dissolve
+    hide sad wintera with dissolve
     hide mc normal wintera with dissolve
 
     stop music fadeout 2.0
@@ -98,7 +97,7 @@ label alexander_ch2:
     scene black with dissolve
     pause 1
 
-    scene bg_park_summer with dissolve
+    scene cj_alex_car1 with dissolve
     play music sadness fadein 1.0
 
     "Маленький Саша шёл за руку с отцом, возвращаясь из парка. Было тихое осеннее утро. Мальчик увлечённо рассказывал про своих любимых птиц — синичек, держа крепкую руку отца."
@@ -108,12 +107,18 @@ label alexander_ch2:
     "Папа отвлёкся на телефонный разговор и выпустил руку сына из своей, немного уходя вперёд. Именно тогда Саша заметил её — маленькую жёлтую птичку, прыгающую у края дороги."
 
     "Её яркое оперение было будто пером солнечного света на сером асфальте."
+    
+    scene cj_alex_car2 with dissolve
 
     sh "Смотри, пап, синичка! — воскликнул мальчик, заворожённо следя за каждым движением птицы."
 
     "Но отец не услышал его восторженного возгласа, увлёкшись телефонным разговором."
 
+    scene cj_alex_car3 with dissolve
+
     "Синичка подпрыгнула ещё раз, и Саша невольно сделал шаг вперёд, потом ещё один. Ему так хотелось рассмотреть её поближе."
+
+    scene cj_alex_car4 with dissolve
 
     "Он уже стоял на проезжей части, когда из-за поворота на огромной скорости вылетела машина."
 
@@ -121,13 +126,17 @@ label alexander_ch2:
 
     "Всё произошло за мгновение."
 
+    scene cj_alex_car5 with dissolve
+
     scene black with dissolve
+
+    scene cj_alex_car6 with dissolve
 
     "Отец рывком оттянул мальчика на тротуар."
 
     "Машина пролетела в нескольких сантиметрах от них, обдав обоих ветром."
 
-    scene bg_park_summer with dissolve
+    scene cj_alex_car7 with dissolve
 
     "Саша стоял, дрожа всем телом, не в силах издать ни звука. Отец опустился на корточки и крепко обнял сына дрожащими руками."
 
