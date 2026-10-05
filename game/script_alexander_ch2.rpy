@@ -514,7 +514,7 @@ label alex_spectacle:
 
     #==ПЛОХАЯ ВЕТКА==
 
-     label alex_badroot:
+    label alex_badroot:
 
     scene bg_room_dark with dissolve
     play music chill fadein 2.0
