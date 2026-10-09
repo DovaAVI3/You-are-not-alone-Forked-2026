@@ -11,6 +11,89 @@ define toldPerson = 0
 define sorry = False
 define knowName = False
 
+# Для мини игры
+default tg_needed = []
+default tg_picked = []
+default tg_max = 0
+default tg_left = 0
+default tg_back = "black"
+default tg_bag_pos = (0, 0)
+default tg_bag_size = (200, 300)
+default tg_counter_text = ""
+# Логика и функции
+init python:
+    def tg_init(bg, *args, **kwargs):
+        store.tg_needed = []
+        store.tg_picked = []
+        store.tg_back = bg
+        for item, x, y in args:
+            store.tg_needed.append([item, x, y])
+        store.tg_max = len(store.tg_needed)
+        store.tg_left = store.tg_max
+        for k, v in kwargs.items():
+            setattr(store, "tg_" + k, v)
+
+    def tg_bg():
+        renpy.show_screen("TrashGame")
+
+    def tg_hide():
+        renpy.hide_screen("TrashGame")
+
+    def tg_start():
+        renpy.call_screen("TrashGame")
+
+    def tg_check(drags, drop):
+        if not drags:
+            return
+        drag_obj = drags[0]
+        px = drag_obj.x + drag_obj.w / 2
+        py = drag_obj.y + drag_obj.h / 2
+        bx1, by1 = store.tg_bag_pos
+        bx2 = bx1 + store.tg_bag_size[0]
+        by2 = by1 + store.tg_bag_size[1]
+        if bx1 <= px <= bx2 and by1 <= py <= by2:
+            name = drag_obj.drag_name
+            for entry in store.tg_needed:
+                if entry[0] == name:
+                    store.tg_needed.remove(entry)
+                    store.tg_picked.append(entry)
+                    store.tg_left = len(store.tg_needed)
+                    renpy.restart_interaction()
+                    if store.tg_left < 1:
+                        renpy.end_interaction(True)
+                    return
+
+screen TrashGame():
+    default tg_hover = None
+    add tg_back
+    add "trash_bag" xpos tg_bag_pos[0] ypos tg_bag_pos[1]
+    draggroup:
+        for _item, _x, _y in tg_needed:
+            drag:
+                drag_name _item
+                xpos _x
+                ypos _y
+                xysize (200, 150)
+                draggable True
+                droppable False
+                drag_raise True
+                dragged tg_check
+
+                hovered SetScreenVariable("tg_hover", _item)
+                unhovered SetScreenVariable("tg_hover", None)
+
+                if tg_hover == _item:
+                    add (_item + "_hover")
+                else:
+                    add (_item)
+    frame:
+        background Frame("#fe9", 0, 0)
+        xpadding 20
+        ypadding 15
+        align (.5, .0)
+        yoffset 40
+        text "[tg_max - tg_left]/[tg_max] [tg_counter_text]" color "#014"
+
 # Легкое потускнение спрайта, чтобы он сильно не рябил в глазах
 transform dim:
     matrixcolor SaturationMatrix(0.5)
@@ -1338,8 +1421,38 @@ label cleanup_closet:
 
     "Ладно, сейчас нужно выполнить своё обещание и закончить уборку здесь, иначе моряк мне жизни не даст."
 
-    #Здесь у нас мини игра
+    # Мини игра
+    scene black with dissolve
+    hide screen TrashGame
+    $ tg_init("bg_closet_clean",
+        ("paper1", 1805, 906),
+        ("paper2", 1672, 662),
+        ("paper3", 336, 906),
+        ("paper4", 246, 146),
+        ("paper5", 447, 636),
+        ("paper6", 769, 448),
+        ("paper7", 904, 587),
+        bag_pos=(661, 849),
+        bag_size=(600, 1200),
+        counter_text=_("Кусок бумаги")
+    )
 
+    scene bg_closet_inside with dissolve
+
+    centered "{size=+24}{color=#ffffe0}Выброси все бумаги в мешок."
+
+    $ tg_bg() 
+    with dissolve
+    scene bg_closet_clean with dissolve
+    $ tg_start()
+   
+    centered "{size=+24}{color=#ffffe0}Ты справился!"
+
+    $ tg_hide() 
+    with dissolve
+
+    # Закончили мини игру
+    
     "Фух... Вроде бы более-менее. Не идеально, конечно, но уже можно свободно дышать. Хорошо поработал. Теперь можно и в общагу, наконец-то."
 
     stop music fadeout 2.0
