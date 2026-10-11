@@ -147,6 +147,8 @@ image timur very angrya = At('timur very angry', sprite_highlight('timur'))
 image alex normala = At('alex normal', sprite_highlight('alex'))
 image alex smilea = At('alex smile', sprite_highlight('alex'))
 image alex gloomya = At('alex gloomy', sprite_highlight('alex'))
+image alex pajama normala = At('alex pajama normal', sprite_highlight('alex'))
+image alex pajama confusiona = At('alex pajama confusion', sprite_highlight('alex'))
 
 image comenda normal = At('commandant normal', sprite_highlight('comenda'))
 image comenda angry = At('commandant angry', sprite_highlight('comenda'))
