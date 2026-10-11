@@ -10,6 +10,7 @@ define tellMargo = False
 define toldPerson = 0
 define sorry = False
 define knowName = False
+define searched_room = False
 
 # Для мини игры
 default tg_needed = []
@@ -622,6 +623,7 @@ label alexander:
     menu:
         "Подойти поздороваться":
             $ relate_alex += 10
+            $ searched_room = False
             "Была ни была, уж лучше спрошу заранее, чем напортачу. Переделывать потом не хочется — лишняя морока, да и времени жалко."
 
             "Шнурок, как я понял, любит пунктуальность и чёткость. Во время совместной работы я получше узнаю старосту и, возможно, зарекомендую себя в его глазах как хороший студент и одногруппник, или, может, приятель."
@@ -970,6 +972,7 @@ label alexander:
 
             "А вдруг я и кабинет быстро найду, и со Шнурком потом успею поговорить? Тогда вообще сразу убью двух зайцев."
 
+            $ searched_room = True
             stop music fadeout 2.0
             jump find_room
 
