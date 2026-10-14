@@ -9,11 +9,11 @@ define od = Character('Ольга Дмитриевна', ctc_position="fixed", c
 define od_un = Character('Коменда', ctc_position="fixed", color="#3d3327", image='comenda', callback=name_callback, cb_name="comenda")
 define j_un = Character('???', ctc_position="fixed", color="#3d3327", image='jenya', callback=name_callback, cb_name="jenya")
 define a_un = Character('???', ctc_position="fixed", color="#3d3327", image='alex', callback=name_callback, cb_name="alex")
-define sh = Character('Шнурок', ctc_position="fixed", color="#3d3327", image='alex', callback=name_callback, cb_name="alex")
+define sh = Character('Шнурок', ctc="ctc_atl", ctc_position="fixed", color="#3d3327", image='alex', callback=name_callback, cb_name="alex")
 define un = Character('???', ctc="ctc_atl", ctc_position="fixed", color="#3d3327")
 define mg = Character('Марго', ctc_position="fixed", color="#3d3327")
-define u = Character('Уборщик', color="#3d3327")
-define bb = Character('Алевтина Павловна', color="#3d3327")
+define u = Character('Уборщик', ctc="ctc_atl", ctc_position="fixed", color="#3d3327", image='cleaner', callback=name_callback, cb_name="cleaner")
+define bb = Character('Алевтина Павловна', ctc="ctc_atl", ctc_position="fixed", color="#3d3327", image='bb', callback=name_callback, cb_name="bb")
 define dots = Character('...', color="#3d3327")
 #Теги для сообщений
 
@@ -157,6 +157,14 @@ image comenda sad = At('commandant winter sad', sprite_highlight('comenda'))
 image comenda home normala = At('commandant home', sprite_highlight('comenda'))
 image comenda home angrya = At('commandant home angry', sprite_highlight('comenda'))
 image comenda home scared = At('commandant home scared', sprite_highlight('comenda'))
+
+image bb obychnayaa = At('bb obychnaya', sprite_highlight('bb'))
+image bb radostnayaa = At('bb radostnaya', sprite_highlight('bb'))
+image bb supriseda = At('bb suprised', sprite_highlight('bb'))
+image bb ulybkaa = At('bb ulybka', sprite_highlight('bb'))
+image bb unhappya = At('bb unhappy', sprite_highlight('bb'))
+
+image cleaner neutrala = At('cleaner neutral', sprite_highlight('cleaner'))
 
 image eve silhouette black glow = At('eva silhouette black glow', sprite_highlight('e')) #2 глава Жени
 image eve silhouette grey glow = At('eva silhouette grey glow', sprite_highlight('e')) #1 глава Тимура
