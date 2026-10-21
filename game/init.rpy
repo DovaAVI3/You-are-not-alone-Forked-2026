@@ -190,7 +190,7 @@ define audio.coffee = "audio/sounds/spill_coffee.mp3"
 define audio.tire = "audio/sounds/tire.ogg"
 define audio.ruining = "audio/sounds/ruin_room.mp3"
 define audio.smash = "audio/sounds/smash.wav"
-define auidio.trash = "audio/sounds/trash.mp3"
+define audio.trash = "audio/sounds/trash.mp3"
 define audio.scotch = "audio/sounds/scotch.mp3"
 define audio.stomach = "audio/sounds/stomach_groaning.mp3"
 

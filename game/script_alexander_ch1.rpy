@@ -10,7 +10,7 @@ define tellMargo = False
 define toldPerson = 0
 define sorry = False
 define knowName = False
-define searched_room = False
+default searched_room = False
 
 # Для мини игры
 default tg_needed = []
