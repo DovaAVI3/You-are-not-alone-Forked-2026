@@ -298,7 +298,7 @@ label start:
     if persistent.ending1 and persistent.ending122:
         scene bg_rut with dissolve
     else:
-        scene bg_rutnoeve with dissolve
+        scene bg_rut with dissolve
 
     "Повезло, препод ещё не пришёл."
 
