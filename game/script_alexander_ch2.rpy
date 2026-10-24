@@ -746,7 +746,9 @@ label library_kto_ty:
 
     "Я резко вскочил, наклонившись над столом. Рука сама поднялась и с резким, звонким шлепком ударила Шнурка по щеке."
 
-    show alex шок замер at right2 with dissolve
+    hide alex повседневный злой at right2 with dissolve
+
+    show alex_angry_hit2 at right2 with dissolve
 
     "Звук показался невероятно громким в гробовой тишине библиотеки."
 
@@ -758,7 +760,9 @@ label library_kto_ty:
 
     "Что я… что я только что натворил?.."
 
-    show alex с отпечатком ладони at right2 with dissolve
+    hide alex_angry_hit2 at right2 
+
+    show alex_angry_hit at right2 
 
     sh "Большего… я от тебя и не ожидал."
 
@@ -766,7 +770,7 @@ label library_kto_ty:
 
     "Я хотел что-то сказать, извиниться, окликнуть, но слова застряли в горле. Я просто наблюдал, как он, не оглядываясь, исчез между стеллажей."
 
-    hide alex с отпечатком ладони with dissolve
+    hide alex_angry_hit at right2 with dissolve
 
     show mc thoughtful crosseda at left2 with dissolve
 
