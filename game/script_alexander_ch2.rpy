@@ -334,6 +334,10 @@ label margo_and_alex:
 
     "Теперь можно и в общагу."
 
+    if persistent.alex_theatre != True:
+        $ renpy.notify("В дневнике появилась новая запись!")
+    $ persistent.alex_theatre = True
+
     jump alex_night_call
 
 label alex_night_call:
@@ -508,10 +512,6 @@ label alex_spectacle:
     "Они вместе вышли на улицу, а я следом за ними отправился в общагу. Один, но с лёгким сердцем."
 
     "Ничего себе, я настоящий сваха! Розе Сябитовой осталось только позавидовать моим навыкам."
-
-    if persistent.alex_theatre != True:
-        $ renpy.notify("В дневнике появилась новая запись!")
-    $ persistent.alex_theatre = True
     
     # Ночная сцена с Евой
     scene bg_room_dark with dissolve
