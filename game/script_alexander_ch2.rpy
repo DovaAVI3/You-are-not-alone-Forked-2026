@@ -184,6 +184,7 @@ label alexander_ch2:
 
     # В аудитории
     scene bg_classroom2 with dissolve
+    stop background fadeout 1.0
 
     "Дальше мы шли молча. Зайдя в аудиторию, я сел за парту и достал из рюкзака тетрадь. Открыв её, я увидел пустоту вместо домашки."
 
@@ -572,7 +573,6 @@ label alex_spectacle:
 
     hide mc пижама грустный with dissolve
 
-    stop background fadeout 1.0
     scene bg_room_morning with dissolve
 
     "Да я лучше бы в телефоне позалипал, чем пошёл куда-то. Серьёзно, отбирают мой единственный выходной. Почему нельзя всё решить в переписке?"
@@ -581,6 +581,7 @@ label alex_spectacle:
 
     "Сборы прошли так же нудно, как и дорога на место встречи. Я постоянно ловил себя на мысли, что мне придётся заниматься нелюбимым делом, так ещё и в выходной."
 
+    stop background fadeout 1.0
     stop music fadeout 2.0
     scene bg_library with dissolve
     play music sadness fadein 2.0
