@@ -371,6 +371,10 @@ label alexander:
 
     "Староста прочитал мои мысли и решил показать мне моё новое место учёбы? Интересно, куда мы идём?"
 
+    if persistent.alex_meet != True:
+        $ renpy.notify("В дневнике появилась новая запись!")
+    $ persistent.alex_meet = True
+    
     stop background
     play sound steps
     scene black with dissolve
@@ -962,6 +966,10 @@ label alexander:
 
             "Не знаю, что я представлял себе час назад, но сейчас передо мной сидел не «зануда-староста», а вполне живой человек, у которого внутри тоже что-то горит. Просто он это никому обычно не показывает."
 
+            if persistent.alex_cafe != True:
+                $ renpy.notify("В дневнике появилась новая запись!")
+            $ persistent.alex_cafe = True
+            
             hide alex normala
             hide mc smilea
 

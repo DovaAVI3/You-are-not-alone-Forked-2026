@@ -509,6 +509,10 @@ label alex_spectacle:
 
     "Ничего себе, я настоящий сваха! Розе Сябитовой осталось только позавидовать моим навыкам."
 
+    if persistent.alex_theatre != True:
+        $ renpy.notify("В дневнике появилась новая запись!")
+    $ persistent.alex_theatre = True
+    
     # Ночная сцена с Евой
     scene bg_room_dark with dissolve
     stop music fadeout 2.0

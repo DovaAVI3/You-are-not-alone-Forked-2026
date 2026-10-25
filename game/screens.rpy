@@ -495,6 +495,7 @@ screen diary():
 
     imagebutton auto "gui/button/d_zhenya_%s.png" xpos 1323 ypos 120 focus_mask True action ShowMenu("zhenya") hovered [ Play("sound", "audio/bumaga.ogg") ]
     imagebutton auto "gui/button/d_timur_%s.png" xpos 1323 ypos 240 focus_mask True action ShowMenu("timur") hovered [ Play("sound", "audio/bumaga.ogg") ]
+    imagebutton auto "gui/button/d_timur_%s.png" xpos 1323 ypos 360 focus_mask True action ShowMenu("alex") hovered [ Play("sound", "audio/bumaga.ogg") ]
 
 
     imagebutton auto "gui/button/bt_history_back_%s.png" xpos 200 ypos 960 focus_mask True action Return() hovered [ Play("sound", "audio/bumaga.ogg") ]
@@ -645,6 +646,35 @@ screen timur:
         elif persistent.timur_good:
             text "{font=Assya Font Official.otf}{size=+5}19.02 Благодаря советам Тимура работать было легче. Я, конечно, устал за день, но, главное, всё сделал правильно. Кстати, странно, что в углу на обоях нарисован какой-то смайлик.{/size}{/font}"
 
+
+screen alex:
+    tag menu
+    add "gui/diary_menu_open.png"
+    imagebutton auto "gui/button/bt_history_back_%s.png" xpos 300 ypos 900 focus_mask True action ShowMenu("diary") hovered [ Play("sound", "audio/bumaga.ogg") ]
+
+    hbox:
+        spacing 0
+        xsize 600
+        ysize 60
+        xalign 0.25 yalign 0.15
+        if persistent.alex_meet:
+            text "{font=Assya Font Official.otf}{size=+5}Познакомился со старостой, вынужденно. Колкий тип, хочется форточку открыть... Согласился участвовать в его проекте, получится ли у меня это с таким человеком?{/size}{/font}"
+
+    hbox:
+        spacing 0
+        xsize 600
+        ysize 100
+        xalign 0.25 yalign 0.38
+        if persistent.alex_cafe:
+            text "{font=Assya Font Official.otf}{size=+5}Волшебное комбо с игрушкой х1 - 750 руб. (Магический бургер - 320 руб. Картошка фри - 130 руб. Лавандовый латте 0,3 - 300 руб.) ИТОГО - 750 руб. Попалась редкая игрушка, жаль, что у меня такая уже есть.{/size}{/font}"
+
+    hbox:
+        spacing 0
+        xsize 600
+        ysize 80
+        xalign 0.25 yalign 0.6
+        if persistent.alex_theatre:
+            text "{font=Assya Font Official.otf}{size=+5}Саша не так плох, как мне казалось. Неужели не совсем засох с этой учёбой?\nМарго, выступление в пятницу в 15:30. Идём с Сашей.{/size}{/font}"
 
     # Код галлереи
 screen gallery():
