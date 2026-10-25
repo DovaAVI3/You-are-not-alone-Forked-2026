@@ -678,7 +678,7 @@ label hidden_eva_branch:
     "Вы вышли на скрытую концовку."
 
     stop music fadeout 1.5
-    scene cj_аудитория_в_паутине with dissolve
+    scene cj_audio_forward with dissolve
     play music mystery fadein 2.0
 
     "Вдруг, открыв глаза, я заметил, что обстановка как-то изменилась. Я всё ещё находился в аудитории, но не в той, в которой был перед тем, как заснул."
@@ -707,7 +707,7 @@ label eva_dream_choice:
 
 
 label eva_look_left:
-    scene cj_аудитория_налево with dissolve
+    scene cj_audio_left with dissolve
 
     "Я повернул голову налево. Все окна в аудитории были разбиты. Не просто треснувшие стекла, а полностью выбитые рамы, через которые свободно проникал холодный воздух."
 
@@ -723,7 +723,7 @@ label eva_look_left:
 
 
 label eva_look_right:
-    scene cj_аудитория_направо with dissolve
+    scene cj_audio_right with dissolve
 
     "Я посмотрел направо, и мне стало не по себе. Там, где раньше висела доска, теперь вырисовывалось лишь пятно на голой стене и несколько торчащих гвоздей."
 
@@ -737,7 +737,7 @@ label eva_look_right:
 
 
 label eva_turn_around:
-    scene cj_аудитория_задник with dissolve
+    scene cj_audio_backward with dissolve
 
     "Я сидел и думал, что только в таких условиях я бы вряд ли спал на парах и, может быть, даже вникал бы в то, что говорит препод."
 
@@ -859,7 +859,7 @@ label cipher_input:
 label night_walk:
     stop music fadeout 2.0
     # TODO: подставить bg_улица_темная когда нарисуют. Пока используем существующий ночной фон.
-    scene bg_street_night_winter with dissolve
+    scene bg_street_nightmare with dissolve
     play background wind fadein 2.0
     play music mystery fadein 2.0
 

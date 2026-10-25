@@ -85,7 +85,7 @@ label alexander_ch2:
 
     mc "Да, стоит поторопиться."
 
-    hide sad wintera with dissolve
+    hide alex sad wintera with dissolve
     hide mc normal wintera with dissolve
 
     stop music fadeout 2.0
@@ -184,6 +184,7 @@ label alexander_ch2:
 
     # В аудитории
     scene bg_classroom2 with dissolve
+    stop background fadeout 1.0
 
     "Дальше мы шли молча. Зайдя в аудиторию, я сел за парту и достал из рюкзака тетрадь. Открыв её, я увидел пустоту вместо домашки."
 
@@ -242,10 +243,9 @@ label alex_ch2_choice:
 
                 "Где же я её видел? Может, она тоже участвовала в университетских мероприятиях? Чёрт, опять эта пустота в голове, стоит только попытаться вспомнить…"
             else:
-                # TODO: добавить альтернативный текст для игроков, которые не искали кабинет
-                "Но мысли упрямо уплывали, а речь Шнурка становилась белым шумом. Перед глазами снова всплывало лицо девушки из газеты."
+                "Но мысли упрямо уплывали, а речь Шнурка становилась белым шумом. Почему-то снова вспомнился тот сон: снег, ветер и голос, который так и не успел назвать своё имя."
 
-                "Где же я её видел? Может, она тоже участвовала в университетских мероприятиях? Чёрт, опять эта пустота в голове, стоит только попытаться вспомнить…"
+                "И кабинет из сна… Я так и не проверил, существует ли он на самом деле. Наверное, глупость, сны есть сны. Но почему тогда он не выходит у меня из головы?"
 
             hide alex normala with dissolve
 
@@ -333,6 +333,10 @@ label margo_and_alex:
     hide mc smile crosseda with dissolve
 
     "Теперь можно и в общагу."
+
+    if persistent.alex_theatre != True:
+        $ renpy.notify("В дневнике появилась новая запись!")
+    $ persistent.alex_theatre = True
 
     jump alex_night_call
 
@@ -508,7 +512,7 @@ label alex_spectacle:
     "Они вместе вышли на улицу, а я следом за ними отправился в общагу. Один, но с лёгким сердцем."
 
     "Ничего себе, я настоящий сваха! Розе Сябитовой осталось только позавидовать моим навыкам."
-
+    
     # Ночная сцена с Евой
     scene bg_room_dark with dissolve
     stop music fadeout 2.0
@@ -524,6 +528,7 @@ label alex_spectacle:
 
     "Она не двигалась, просто смотрела в мою сторону. Это был образ из моих ночных кошмаров."
 
+    stop background fadeout 2.0
     scene black with dissolve
     pause 2
 
@@ -580,6 +585,7 @@ label alex_spectacle:
 
     "Сборы прошли так же нудно, как и дорога на место встречи. Я постоянно ловил себя на мысли, что мне придётся заниматься нелюбимым делом, так ещё и в выходной."
 
+    stop background fadeout 1.0
     stop music fadeout 2.0
     scene bg_library with dissolve
     play music sadness fadein 2.0
@@ -745,7 +751,9 @@ label library_kto_ty:
 
     "Я резко вскочил, наклонившись над столом. Рука сама поднялась и с резким, звонким шлепком ударила Шнурка по щеке."
 
-    show alex шок замер at right2 with dissolve
+    hide alex повседневный злой at right2 with dissolve
+
+    show alex_angry_hit2 at right2 with dissolve
 
     "Звук показался невероятно громким в гробовой тишине библиотеки."
 
@@ -757,7 +765,9 @@ label library_kto_ty:
 
     "Что я… что я только что натворил?.."
 
-    show alex с отпечатком ладони at right2 with dissolve
+    hide alex_angry_hit2 at right2 
+
+    show alex_angry_hit at right2 
 
     sh "Большего… я от тебя и не ожидал."
 
@@ -765,7 +775,7 @@ label library_kto_ty:
 
     "Я хотел что-то сказать, извиниться, окликнуть, но слова застряли в горле. Я просто наблюдал, как он, не оглядываясь, исчез между стеллажей."
 
-    hide alex с отпечатком ладони with dissolve
+    hide alex_angry_hit at right2 with dissolve
 
     show mc thoughtful crosseda at left2 with dissolve
 
