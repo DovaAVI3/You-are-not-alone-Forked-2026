@@ -72,11 +72,11 @@ screen rutChoice():
         yalign 0.563
         auto "images/rutChoice/timur_button_%s.png" focus_mask True action [Jump("timur")]
 
-    ##if persistent.ending122:
-    imagebutton:
-        xalign 0.5798
-        yalign 0.308
-        auto "images/rutChoice/eve_button_%s.png" focus_mask True action [Jump("eve")]
+    if persistent.ending122:
+        imagebutton:
+            xalign 0.5798
+            yalign 0.308
+            auto "images/rutChoice/eve_button_%s.png" focus_mask True action [Jump("eve")]
 
 
 init python:
