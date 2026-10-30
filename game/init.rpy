@@ -11,7 +11,7 @@ define j_un = Character('???', ctc_position="fixed", color="#3d3327", image='jen
 define a_un = Character('???', ctc_position="fixed", color="#3d3327", image='alex', callback=name_callback, cb_name="alex")
 define sh = Character('Шнурок', ctc="ctc_atl", ctc_position="fixed", color="#3d3327", image='alex', callback=name_callback, cb_name="alex")
 define un = Character('???', ctc="ctc_atl", ctc_position="fixed", color="#3d3327")
-define mg = Character('Марго', ctc_position="fixed", color="#3d3327", image='margo', callback=name_callback, cb_name="margo")
+define mg = Character('Марго',ctc="ctc_atl", ctc_position="fixed", color="#3d3327", image='margo', callback=name_callback, cb_name="margo")
 define u = Character('Уборщик', color="#3d3327")
 define bb = Character('Алевтина Павловна', color="#3d3327")
 define dots = Character('...', color="#3d3327")
