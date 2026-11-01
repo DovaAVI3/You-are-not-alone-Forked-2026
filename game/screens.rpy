@@ -656,23 +656,31 @@ screen alex:
         spacing 0
         xsize 600
         ysize 60
-        xalign 0.25 yalign 0.15
+        xalign 0.25 yalign 0.1
         if persistent.alex_meet:
             text "{font=Assya Font Official.otf}{size=+5}Познакомился со старостой, вынужденно. Колкий тип, хочется форточку открыть... Согласился участвовать в его проекте, получится ли у меня это с таким человеком?{/size}{/font}"
 
     hbox:
         spacing 0
         xsize 600
-        ysize 100
-        xalign 0.25 yalign 0.38
+        ysize 300 
+        xalign 0.75 yalign 0.15
         if persistent.alex_cafe:
-            text "{font=Assya Font Official.otf}{size=+5}Волшебное комбо с игрушкой х1 - 750 руб. (Магический бургер - 320 руб. Картошка фри - 130 руб. Лавандовый латте 0,3 - 300 руб.) ИТОГО - 750 руб. Попалась редкая игрушка, жаль, что у меня такая уже есть.{/size}{/font}"
+            text "{image=gui/diary_pictures/cj_alex_check.png}"
+
+    hbox:
+        spacing 0
+        xsize 600
+        ysize 50
+        xalign 0.25 yalign 0.28
+        if persistent.alex_cafe:
+            text "{font=Assya Font Official.otf}{size=+5}Попалась редкая игрушка, жаль, что у меня такая уже есть.{/size}{/font}"
 
     hbox:
         spacing 0
         xsize 600
         ysize 80
-        xalign 0.25 yalign 0.6
+        xalign 0.25 yalign 0.39
         if persistent.alex_theatre:
             text "{font=Assya Font Official.otf}{size=+5}Саша не так плох, как мне казалось. Неужели не совсем засох с этой учёбой?\nМарго, выступление в пятницу в 15:30. Идём с Сашей.{/size}{/font}"
 
