@@ -149,6 +149,11 @@ image alex smilea = At('alex smile', sprite_highlight('alex'))
 image alex gloomya = At('alex gloomy', sprite_highlight('alex'))
 image alex pajama normala = At('alex pajama normal', sprite_highlight('alex'))
 image alex pajama confusiona = At('alex pajama confusion', sprite_highlight('alex'))
+image alex home smilea = At('alex home smile', sprite_highlight('alex'))
+image alex home angrya = At('alex home angry', sprite_highlight('alex'))
+image alex home confusiona = At('alex home confusion', sprite_highlight('alex'))
+image alex home confusion blusha = At('alex home confusion blush', sprite_highlight('alex'))
+
 
 image margo basea = At('margo base', sprite_highlight('margo'))
 image margo confusiona = At('margo confusion', sprite_highlight('margo'))
