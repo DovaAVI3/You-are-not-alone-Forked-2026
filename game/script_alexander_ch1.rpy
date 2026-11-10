@@ -11,6 +11,7 @@ define toldPerson = 0
 define sorry = False
 define knowName = False
 define searched_room = False
+define relate_alex = 0
 
 # Для мини игры
 default tg_needed = []
@@ -410,18 +411,24 @@ label alexander:
 
     "Я правда не ослышался?"
     
-    scene cj_pinboard_hallway with dissolve
+    
     show mc surprisea at left2 with dissolve
     mc "Что? Не могу поверить! Да это моё любимое аниме! Я что, выиграл джекпот?"
 
-    "Моей радости не было предела. Никогда бы не подумал, что в университетах в рамках учебной дисциплины создают игру по аниме, да ещё и по моему любимому! Это же так круто!"
+    hide mc surprisea at left2 with dissolve
+    hide alex normala at right2, normal with dissolve
+    scene cj_mc_alex_pinboard with dissolve
 
+    "Моей радости не было предела. Никогда бы не подумал, что в университетах в рамках учебной дисциплины создают игру по аниме, да ещё и по моему любимому! Это же так круто!"
+    scene cj_pinboard_hallway with dissolve
     show alex gloomya at right2 with dissolve
 
-    show mc normala at left2 with dissolve
+    show mc surprisea at left2 with dissolve
+
+    
 
     "Возможно, моя бурная реакция была ошибкой — я сразу понял, что это было слишком громко и эмоционально. Несколько уходящих домой студентов обернулись на мой возглас, и я сразу же притих. К тому же, я перебил Сашу, и мне стало немного не по себе."
-
+    show mc normala at left2 with dissolve
     "Шнурок лишь мельком взглянул на меня, с небольшим, как мне показалось, презрением и продолжил свою речь дальше."
 
     show alex gloomya at right2 with dissolve
