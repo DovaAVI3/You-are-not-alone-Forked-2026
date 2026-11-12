@@ -366,7 +366,7 @@ label alex_night_call:
 
     "Я убрал телефон под подушку, накрылся одеялом с головой, и кое-как уснул, хотя после такого спалось очень плохо."
 
-    if sorry== True and relate_alex >= 15:
+    if relate_alex >= 15:
         jump alex_goodroot
 
     jump alex_badroot
@@ -387,7 +387,7 @@ label alex_night_call:
 
     "Я ответил на звонок."
 
-    scene bg_room_morning with dissolve
+    scene cj_mc_talk_phone with dissolve
 
     mc "Алло?"
 
@@ -555,9 +555,7 @@ label alex_spectacle:
 
     "Но практически сразу же экран телефона загорелся, а гудок снова нарушил тишину в комнате."
     
-    scene bg_room_morning with dissolve
-
-    show mc пижама база at left2 with dissolve
+    scene cj_mc_talk_phone with dissolve
 
     mc "Алло?"
 
@@ -565,15 +563,11 @@ label alex_spectacle:
 
     "Отвечать ничего не хотелось. Моё лицо отражало все эмоции, хорошо, что никто его не видел. Делать мне больше нечего, что ли? И так кучу заданий надо делать по учёбе, ещё и этим заниматься."
 
-    show mc пижама грустный at left2 with dissolve
-
     mc "Саша, ты серьёзно? Выходной же..."
 
     sh "Буду ждать тебя в библиотеке."
 
     mc "Ладно, подъеду."
-
-    hide mc пижама грустный with dissolve
 
     scene bg_room_morning with dissolve
 
