@@ -526,9 +526,10 @@ label alexander_ch3_margo_date:
 
     "Постепенно разговор стал переходить на более личные темы."
 
-    show margo basea at right2 with dissolve
+    show margo_date_base at right2 with dissolve
     mg "Знаешь, на самом деле… Я боюсь, что не смогу реализоваться как актриса. Вдруг не получится? Хоть мне и нравится то, чему мы обучаемся в университете, всё же, я не хотела бы посвящать этому жизнь. Моя мечта с раннего детства — это театр."
-
+    
+    show margo_date_base at right2, dim with dissolve
     show alex normala at left2 with dissolve
     sh "А у меня всегда были довольно сложные отношения с театром. Я не понимал его необходимости и нужности, никогда не приобщался к искусству."
 
@@ -537,30 +538,42 @@ label alexander_ch3_margo_date:
 
     "Марго была тронута моими словами и слегка смущена."
 
-    show margo confusiona at right2 with dissolve
+    show alex smilea at left2, dim with dissolve
+    show margo_date_blush at right2, normal with dissolve
     mg "Спасибо большое. Я, честно, не ожидала, что ты вообще согласишься прийти."
+
+    show alex smilea at left2, normal with dissolve
+    show margo_date_blush at right2, dim with dissolve
 
     sh "Ну… по правде говоря, тут мне [mcname] помог."
 
-    show margo smilea at right2 with dissolve
+    show alex smilea at left2, dim with dissolve
+    show margo_date_smile at right2 with dissolve
     mg "Ты про нашего купидона?"
 
     "Мы оба засмеялись, и я почувствовал, как окончательно растаял."
 
-    "Вскоре, после наших увлечённых разговоров, наступила небольшая пауза. Каждый погрузился в свои мысли, и я заметил, что Марго выглядела немного взволнованной и грустной. Меня это обеспокоило..."
+    hide alex smilea at left2, dim with dissolve
+    hide margo_date_smile at right2 with dissolve
 
-    show alex normala at left2 with dissolve
+    "Вскоре, после наших увлечённых разговоров, наступила небольшая пауза. Каждый погрузился в свои мысли, и я заметил, что Марго выглядела немного взволнованной и грустной. Меня это обеспокоило..."
+    show margo_date_base at right2 with dissolve
+
+    show alex normala at left2, normal with dissolve
     sh "Всё хорошо?"
 
-    show margo basea at right2 with dissolve
+    show alex normala at left2, dim with dissolve
+    show margo_date_blush at right2, normal with dissolve
     mg "Да… То есть, не совсем."
 
     "Меня тут же пронзила мысль: это я. Я что-то сделал не так. Наверное, говорил слишком занудные вещи, испортил ей вечер своими умными фразочками..."
 
-    show alex gloomya at left2 with dissolve
+    show margo_date_base at right2, dim with dissolve
+    show alex gloomya at left2, normal with dissolve
     sh "Если я вдруг что-то сделал не так…"
 
-    show margo confusiona at right2 with dissolve
+    show alex gloomya at left2, dim with dissolve
+    show margo_date_blush at right2, normal with dissolve
     mg "Нет, нет! Всё не так. Просто мне сегодня одногруппница сказала про контрольную. Та, что сегодня была." 
     mg "Меня она не так волнует, но… я переживаю, что ты её пропустил. Мне жаль, что так вышло. Хочу попросить прощения."
 
@@ -595,15 +608,15 @@ label alexander_ch3_margo_date:
 
     "Я не могу исправить ошибки родителей, но я могу пойти своей дорогой, избегая уже знакомых грабель."
 
-    show alex normala at left2 with dissolve
+    show alex normala at left2, normal with dissolve
     sh "Марго, не переживай о контрольной. Я очень благодарен тебе за то, что ты согласилась сходить со мной на свидание. Ты даже не представляешь, как много нового я открыл в себе после нашего знакомства."
     "Теперь я понял, что учёба не стоит того. Гораздо важнее быть рядом с теми, кто понимает и всегда поддержит. А возможность написать работу у меня ещё будет. Если ты не против, я хотел бы чаще проводить с тобой время."
 
-    show margo confusiona at right2 with dissolve
+    show margo_date_blush at right2, normal with dissolve
 
     "Марго ещё немного смущённо хлопала ресницами, её щёки начали розоветь, а мне захотелось увидеть весь спектр её эмоций."
 
-    show margo smilea at right2 with dissolve
+    show margo_date_smile at right2 with dissolve
 
     "Улыбка расплылась на её лице, глаза превратились в полумесяцы. И тут я понял, что это был единственный правильный выбор."
 
@@ -611,18 +624,21 @@ label alexander_ch3_margo_date:
 
     "Лицо Марго такое… Я сам не понял, как моя рука коснулась её. От Марго исходил не только свет вокруг, но и тепло. Моя рука в миг согрелась, а жар с ладоней перешёл на щёки и уши."
 
-    show margo smilea at right2 with dissolve
+    show margo_date_smile at right2 with dissolve
 
     "Марго смущённо улыбнулась, а я поддался её улыбке и тоже начал сиять. И вот мы сидели, наши руки сплетены, а она всё больше отдавала мне своё тепло. Я уверен — это знак, что всё идёт правильно."
 
-    show alex smilea at left2 with dissolve
+    show alex smilea at left2, normal with dissolve
+    show margo_date_smile at right2, dim with dissolve
     sh "Ты не против ещё немного прогуляться?"
 
+    show alex smilea at left2, normal with dissolve
+    show margo_date_smile at right2, normal with dissolve
     mg "С удовольствием!"
 
     stop music fadeout 2.0
     stop background fadeout 2.0
-    scene bg_park_spring_night with dissolve
+    scene bg_park_spring_night_s with dissolve
     play music evening fadein 2.0
     play background city fadein 1.0
 
@@ -640,17 +656,22 @@ label alexander_ch3_margo_date:
     sh "Меня в детстве это всегда забавляло из-за греческого мифа. Каллисто спрятали на небосклоне, чтобы спасти от охоты на неё, а Орион — один из знаменитых древнегреческих охотников."
     sh "Вариаций трактовок мифов, конечно, много, как и путаницы, но теперь по ним, таким полярным, путники находят дорогу."
 
-    show margo smilea at right2 with dissolve
+    show margo_date_smile at right2, normal with dissolve
+    show alex coat smilea at left2, dim with dissolve
     mg "Ты так много знаешь о звёздах! Я не думала, что тебя может интересовать что-то такое романтичное."
 
-    show alex coat normala at left2 with dissolve
+    show alex coat normala at left2, normal with dissolve
+    show margo_date_smile at right2, dim with dissolve
     sh "Это всё отец… Он любил рисовать ночные пейзажи, а с ними и звёзды. Его любовь пошла с картин Куинджи, а мне передалась через науку и мифологию. Не зря храню книги о звёздах." 
     sh "Вообще, он часто втайне от мамы брал меня с собой, чтобы посмотреть на эти небесные светила. В тишине он меня не оставлял — каждый раз рассказывал новую историю о каждой звезде."
+    hide alex coat normala at left2 with dissolve
+    hide margo_date_smile at left2 with dissolve
+
+    scene cj_alex_stars with dissolve
 
     "Марго в какой раз за этот вечер одарила меня улыбкой, а я не мог сдержать свою. Засмотревшись мерцающими глазами на девушку, не заметил, как она медленно опустила голову на моё плечо." 
     "Я начал переживать, что слишком часто дышу и могу спугнуть её, как кошку. Но спустя несколько секунд расслабился, а моя улыбка стала шире."
 
-    show margo smilea at right2 with dissolve
     mg "Смотри! Там звезда упала! Быстрее загадывай желание!"
 
     "Марго подняла голову и резко выпрямилась, тыча рукой в небо. Я не понял, почему её лицо теперь выглядело удивлённым."
@@ -660,25 +681,25 @@ label alexander_ch3_margo_date:
     "Желание… Никогда не загадывал их. Даже на День рождения — просто замирал на несколько секунд перед свечами, что требовала традиция, и задувал. Какой смысл чего-то желать, если нужно добиваться всего самому." 
     "Но после её слов я впервые не смог не загадать его."
 
-    show alex coat smilea at left2 with dissolve
     sh "Успел!"
-
-    show margo smilea at right2 with dissolve
 
     "Улыбка девушки стала шире, она снова облокотилась на спинку лавочки и продолжила разглядывать мерцающий небосклон."
 
     mg "Честно, я думала, звездопады бывают только летом. Где-то около августа, поэтому я так и удивилась."
 
     "Я сразу вспомнил о персеидах и о других метеорных потоках, но почему-то именно это рассказывать не захотел."
-
-    show alex coat smilea at left2 with dissolve
+    
+    scene bg_park_spring_night_s with dissolve
+    show margo_date_smile at right2, normal with dissolve
+    show alex coat smilea at left2, normal with dissolve
     sh "Уверен, эта звезда упала специально, чтобы исполнить твоё желание."
 
     mg "Хи-хи."
 
     "Она просто хихикнула, а я всё больше очаровывался и не мог отводить взгляд. Уголки её губ чуть-чуть опустились, глаза немного округлились. Она отчего-то покраснела и отвела взгляд в сторону."
 
-    show margo confusiona at right2 with dissolve
+    show alex coat smilea at left2, normal with dissolve
+    show margo_date_blush at right2 with dissolve
     mg "Почему ты так смотришь?"
 
     "Миллисекунды растянулись, как будто подсказывая, что наступил момент для решительного шага, чтобы сделать что-то действительно стоящее и важное." 
@@ -699,14 +720,15 @@ label alexander_ch3_margo_love:
     "Мои щёки запылали так, что, мне кажется, это было заметно даже в тусклом свете уличных фонарей. Я сидел, сжав кулаки." 
     "Мне тяжело дались эти слова, но впервые я почувствовал абсолютную уверенность в своём решении. Пусть моё сердце колотится как сумасшедшее, пусть ладони потеют, я готов услышать любой ответ, лишь бы он был честным."
 
+
     show alex coat blusha at left2 with dissolve
     sh "Ты будешь моей девушкой?"
 
-    show margo confusiona at right2 with dissolve
+    show margo_date_blush at right2 with dissolve
 
     "Марго замерла. Её глаза на мгновение широко раскрылись от удивления, но тут же смягчились, а губы расплылись в такой сияющей улыбке, что ответ стал очевиден ещё до того, как она его произнесла."
 
-    show margo smilea at right2 with dissolve
+    show margo_date_smile at right2 with dissolve
     mg "Конечно!"
 
     "Это прозвучало так легко и радостно, словно она произнесла самое естественное в мире слово."
@@ -729,11 +751,11 @@ label alexander_ch3_margo_friends:
     show alex coat normala at left2 with dissolve
     sh "Давай… дружить?"
 
-    show margo confusiona at right2 with dissolve
+    show margo_date_blush at right2 with dissolve
 
     "Марго удивлённо приподняла бровь, и на её лице на мгновение застыло недоумение. Но вместо обиды или разочарования её черты постепенно смягчились, появилась лёгкая, понимающая улыбка."
 
-    show margo basea at right2 with dissolve
+    show margo_date_sad at right2 with dissolve
     mg "Давай."
 
     "В её голосе была лишь тихая, искренняя готовность принять моё предложение. Она откинулась на спинку скамейки, снова глядя в небо. Я сделал то же самое, и внутри меня появилось какое-то облегчение." 
@@ -1188,6 +1210,8 @@ label night_walk:
     "Тени вокруг вдруг сгустились, стали плотными, почти осязаемыми. Они зашевелились."
 
     "Из кустов, с противным, сухим шелестом, выползло существо. Этот призрак, который преследовал меня."
+
+    scene cj_eva_monster
 
     "Её движения были выверенными, тело изгибалось так, как не должен изгибаться человек."
 
