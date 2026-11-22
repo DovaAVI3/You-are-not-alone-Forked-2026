@@ -14,6 +14,7 @@ define un = Character('???', ctc="ctc_atl", ctc_position="fixed", color="#3d3327
 define mg = Character('Марго',ctc="ctc_atl", ctc_position="fixed", color="#3d3327", image='margo', callback=name_callback, cb_name="margo")
 define u = Character('Уборщик', ctc="ctc_atl", ctc_position="fixed", color="#3d3327", image='cleaner', callback=name_callback, cb_name="cleaner")
 define bb = Character('Алевтина Павловна', ctc="ctc_atl", ctc_position="fixed", color="#3d3327", image='bb', callback=name_callback, cb_name="bb")
+define am = Character('Мама Саши', ctc="ctc_atl", ctc_position="fixed", color="#3d3327", image='am', callback=name_callback, cb_name="am")
 define dots = Character('...', color="#3d3327")
 #Теги для сообщений
 
@@ -156,6 +157,8 @@ image alex home confusion blusha = At('alex home confusion blush', sprite_highli
 image alex coat blusha = At('alex coat blush', sprite_highlight('alex'))
 image alex coat normala = At('alex coat normal', sprite_highlight('alex'))
 image alex coat smilea = At('alex coat smile', sprite_highlight('alex'))
+
+image alex moma = At('alex mom', sprite_highlight('am'))
 
 
 image margo basea = At('margo base', sprite_highlight('margo'))

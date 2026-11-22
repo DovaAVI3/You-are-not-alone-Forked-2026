@@ -57,7 +57,7 @@ label alexander_ch3_goodroot:
     play music sunshine fadein 2.0
     play background room fadein 1.0
     
-    #Спрайт мамы Саши обычная
+    show alex mom at center with dissolve
 
     "Она поприветствовала меня, давая пройти в квартиру, как бы вскользь упомянула, что её очень радует, что у сына теперь есть друг и он даже позвал его в гости. Я улыбнулся в ответ и протянул ей пачку печенья, которое купил по пути."
 
@@ -68,6 +68,7 @@ label alexander_ch3_goodroot:
     "Значит, живут вдвоём. Но, думаю, лучше не лезть с вопросами — сам расскажет, если захочет."
 
     "Мы вошли в гостиную — и тут из комнаты появился Саша. В домашней одежде, немного растрёпанный."
+    hide alex mom with dissolve
 
     show alex home normala at right2 with dissolve
 
