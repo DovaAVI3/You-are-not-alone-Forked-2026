@@ -160,7 +160,7 @@ label alexander:
 
     "С первого взгляда новый одногруппник производит приятное впечатление, главное, чтобы за привлекательной внешностью не скрывался какой-нибудь зануда, как это обычно бывает. Но, думаю, что он — идеальный кандидат, чтобы помочь освоиться новенькому."
     
-    play music bright fadein 2.0
+    play music circus fadein 2.0
     scene cj_meet_alex with dissolve
 
     mc "Привет. Не будешь против, если я сяду рядом?"
@@ -326,11 +326,9 @@ label alexander:
 
     "Кажется, я совсем не знаю институт, да я и аудиторию с трудом нашёл, бродил по коридорам, как неприкаянный. А дальше как я буду?"
 
-    stop music fadeout 2.0
     scene black with dissolve
     pause 2.0
     scene bg_uni_day with dissolve
-    play music sunshine fadein 1.0
 
     "Может, мне мой сосед по парте поможет освоиться? Как раз он ещё здесь о чём-то оживлённо разговаривает с преподавателем. У меня всё-таки теплилась надежда, что у нас завяжется диалог."
 
@@ -524,7 +522,7 @@ label alexander:
     scene black with dissolve
     pause 2.0
 
-    play music together fadein 2.0
+    play music mystery fadein 2.0
     "Сегодня был странный день… Всё произошло как-то скомкано, словно я пропустил половину фильма, и я  толком ничего не узнал из того, что хотел. Может, попытаться узнать о вузе другим способом?"
 
     "Как вариант, пообщаться с кем-нибудь из старшекурсников — у них точно есть ответы на все мои вопросы."
@@ -724,7 +722,7 @@ label alexander:
 
             mc "Хорошо, пошли. Спасибо за помощь."
 
-            play music chill fadein 1.0
+            play music sunshine fadein 1.0
 
             scene bg_library with dissolve
 
@@ -954,7 +952,7 @@ label alexander:
             pause 1.0
 
             scene bg_cafe with dissolve
-            play music cozy fadein 2.0
+            play music bright fadein 2.0
             play background talk fadein 1.0
 
             "Мы устроились за столиком у окна. Шнурок сел напротив, ровно, с прямой спиной — даже в кафе он умудрялся выглядеть так, будто пришёл на лекцию. Я не знал, удивляться этому или просто принять как факт."
@@ -1011,7 +1009,7 @@ label alexander:
 
 # Продолжение ветки "Искать кабинет из сна"
 label find_room:
-    play music crossroads fadein 2.0
+    play music sunshine fadein 2.0
     scene bg_hallway with dissolve
     play background room
 
@@ -1108,6 +1106,8 @@ label find_room:
 
     play sound door
     scene bg_classroom_geography_notebook with dissolve
+    stop music fadeout 2.0
+    play music crossroads fadein 2.0
 
     "Полумрак. Пахнет пылью и старыми книгами. Столы, заваленные бумагами, шкафы с потрёпанными папками. На стене — потускневшая карта мира."
 
@@ -1258,8 +1258,10 @@ label cabinet_look_done:
     play sound door
 
 label after_room:
+    stop music fadeout 2.0
     scene bg_hallway with dissolve
     play sound steps
+    play music sunshine fadein 2.0
 
     "Когда я шёл по коридору обратно к вахте, то почувствовал себя полным идиотом. Вместо того, чтобы разбираться с заданием от Шнурка, я сейчас пойду перебирать какой-то хлам."
 
@@ -1410,7 +1412,9 @@ label cleanup_closet:
 
     "Вдруг из-под стопки отчётов пятилетней давности выпала сложенная пополам газета."
 
+    stop music fadeout 2.0
     scene cj_newspaper_small with dissolve
+    play music crossroads fadein 2.0
 
     "Местная газета “Университетский вестник”. Прошлогодний выпуск. Что она делает среди всего этого древнего хлама?"
 
@@ -1497,7 +1501,7 @@ label cleanup_closet:
     jump back_to_dorm
 
 label back_to_dorm:
-    play music home fadein 2.0
+    play music evening fadein 2.0
     scene bg_room_evening with dissolve
     play background room
 
@@ -1560,6 +1564,7 @@ label back_to_dorm:
         "Чёрт, Wi-Fi пропал, как невовремя. Ладно, посмотрю это всё потом, сейчас пойду поем."
 
         "Я закрыл ноутбук. Образ улыбающейся девушки не давал мне покоя."
+        stop music fadeout 2.0
 
     # Общее завершение главы
     "Завтра будет новый день..."
