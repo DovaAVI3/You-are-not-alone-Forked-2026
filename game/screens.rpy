@@ -495,7 +495,7 @@ screen diary():
 
     imagebutton auto "gui/button/d_zhenya_%s.png" xpos 1323 ypos 120 focus_mask True action ShowMenu("zhenya") hovered [ Play("sound", "audio/bumaga.ogg") ]
     imagebutton auto "gui/button/d_timur_%s.png" xpos 1323 ypos 240 focus_mask True action ShowMenu("timur") hovered [ Play("sound", "audio/bumaga.ogg") ]
-    imagebutton auto "gui/button/d_timur_%s.png" xpos 1323 ypos 360 focus_mask True action ShowMenu("alex") hovered [ Play("sound", "audio/bumaga.ogg") ]
+    imagebutton auto "gui/button/d_alexander_%s.png" xpos 1323 ypos 360 focus_mask True action ShowMenu("alex") hovered [ Play("sound", "audio/bumaga.ogg") ]
 
 
     imagebutton auto "gui/button/bt_history_back_%s.png" xpos 200 ypos 960 focus_mask True action Return() hovered [ Play("sound", "audio/bumaga.ogg") ]
