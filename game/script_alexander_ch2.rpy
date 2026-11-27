@@ -4,6 +4,20 @@ label alexander_ch2:
     # Таймскип
     $ set_quick_menu(False)
     scene black with dissolve
+
+    pause 1
+
+    scene cj_chapter2_alex1 with dissolve
+
+    pause 0.5
+
+    play sound perelist
+
+    scene cj_chapter2_alex2 with dissolve
+
+    pause 3
+
+    scene black with dissolve
     pause 1
 
     play music together fadein 2.0
